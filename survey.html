@@ -6,41 +6,63 @@
     <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
-    <h1 id="title">We're Not Really Strangers</h1>
-    <p id="description">Who were you before? Who are you now? Who will you be? Self love means loving all versions of yourself, even the ones you may not recognize anymore, and the ones you haven’t met yet.</p>
+    <header class="hero">
+      <h1 class="title" id="title">We're Not Really Strangers</h1>
+      <p class="description" id="description">Who were you before? Who are you now? Who will you be? Self love means loving all versions of yourself, even the ones you may not recognize anymore, and the ones you haven’t met yet.</p>
+    </header>
     <form id="survey-form">
-      <fieldset>
-        <label for="name" id="name-label">What is your name?
-          <input id="name" type="text" required placeholder="...or preferred nickname!">
+      <div class="form-section">
+        <label for="name" id="name-label">What is your name?</label>
+        <input class="textbox" id="name" type="text" required placeholder="...or preferred nickname!">
+      </div>
+      <div class="form-section">
+        <label for="email" id="email-label">What is your email?</label>
+        <input class="textbox" id="email" type="email" required placeholder="Email address">
+      </div>
+      <div class="form-section">
+        <label for="number" id="number-label">On a scale from 1-10, how well do you think you know yourself?</label>
+        <input class="textbox" id="number" type="number" min="0" max="10" placeholder="E.g. 5">
+      </div>
+      <div class="form-section">
+        <label for="dropdown" id="living">Do you live in the past, the present or the future?</label>
+        <select class="textbox" id="dropdown">
+          <option value="">(Only select one)</option>
+          <option value="1">Past</option>
+          <option value="2">Present</option>
+          <option value="3">Future</option>
+        </select>
+      </div>
+      <div class="form-section">
+        <p>Do you feel ready to get to know yourself better?</p>
+        <label for="exploration">
+          <input class="input-radio" id="exploration" name="exploration" type="radio" value="yes">Yes
         </label>
-        <label for="email" id="email-label">What is your email?
-          <input id="email" type="email" required placeholder="Email address">
+        <label for="exploration">
+          <input class="input-radio" id="exploration" name="exploration" type="radio" value="no">Not yet
         </label>
-      </fieldset>
-      <fieldset>
-        <label for="number" id="number-label">On a scale from 1-10, how well do you think you know yourself?
-          <input id="number" type="number" min="0" max="10" placeholder="E.g. 5">
+      </div>
+      <div class="form-section">
+        <p>If you were to start checking in with yourself on a daily basis, how would you do it?</p>
+        <label for="check-in">
+          <input class="input-checkbox" type="checkbox" value="journal">Journalling
         </label>
-        <label for="dropdown" id="living">Do you live in the past, the present or the future?
-          <select id="dropdown">
-            <option value="">(Only select one)</option>
-            <option value="1">Past</option>
-            <option value="2">Present</option>
-            <option value="3">Future</option>
-          </select>
-        <label for="exploration">Do you feel ready to get to know yourself better?
-          <input id="exploration" name="exploration" type="radio" value="yes">Yes
-          <input id="exploration" name="exploration" type="radio" value="no">Not yet
+        <label for="check-in">
+          <input class="input-checkbox" type="checkbox" value="meditation">Meditating
         </label>
-        <label for="check-in">If you were to start checking in with yourself on a daily basis, how would you do it?
-          <input type="checkbox" value="journal">Journalling
-          <input type="checkbox" value="meditation">Meditating
-          <input type="checkbox" value="talking">Talking to someone
-          <input type="checkbox" value="self-care">Practicing self-care
-        <label for="letter">Write a letter to your younger self.
-          <textarea id="letter" rows=3 cols=30 placeholder="Dear [x]... You became the person you always dreamed to be."></textarea>
+        <label for="check-in">
+          <input class="input-checkbox" type="checkbox" value="talking">Talking to someone
+        </label>
+        <label for="check-in">
+          <input class="input-checkbox" type="checkbox" value="self-care">Practicing self-care
+        </label>
+      </div>
+      <div class="form-section">
+        <label for="letter">Write a letter to your younger self.</label>
+        <textarea class="letter" id="letter" placeholder="Dear [x]... You became the person you always dreamed to be."></textarea>
+      </div>
+      <div class="form-section">
         <input type="submit" id="submit">
-      </fieldset>
+      </div>
     </form>
   </body>
 </html>
